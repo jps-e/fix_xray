@@ -18,3 +18,4 @@ UPDATE "excerpt" SET related_entities = '402,40,165,417,9,42,153,95,375,155' whe
 UPDATE "excerpt" SET related_entities = '402,40,9,42,165,153,95,417,375,155' where id = 328;
 UPDATE "excerpt" SET related_entities = '153,402,40,193,9,165,417' where id = 329;
 DELETE from entity where id=196;
+DELETE from entity_description where entity=196;
