@@ -4,7 +4,7 @@ use warnings;
 use Getopt::Long;
 
 my ($entity, $beg, $end, $name, $who);
-my $fmt = "UPDATE \"occurrence\" SET entity=%d where start=%d AND length=%d\n";
+my $fmt = "UPDATE \"occurrence\" SET entity=%d where start=%d AND length=%d;\n";
 GetOptions(
            "entity=i" => \$entity,
            "who=s" => \$who
