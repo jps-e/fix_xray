@@ -26,3 +26,4 @@ while(<>) {
   print "$b$txt$eb";
   $pos += $n;
 }
+while(read FHraw, $txt, 8192 > 0) { print $txt; }
