@@ -14,5 +14,5 @@ GetOptions(
 $txt = `cat $inp`;
 my $loc = 0;
 while (($loc = index($txt, $str, $loc + 1)) > 0) {
-  printf "%d\t10\n", $loc + $offset;
+  printf "%d\t%d\n", $loc + $offset, length($l);
 }
