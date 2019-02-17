@@ -1,1 +1,1 @@
-XRAYfixes/XRAY.fix.B00EMXBDMA.sql
+XRAY.fix.B00EMXBDMA.sql
