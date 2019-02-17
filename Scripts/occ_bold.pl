@@ -16,6 +16,7 @@ die "No raw ML input file specified." unless $raw;
 open FHraw, $raw or die "Can't open $raw for reading";
 if ($out) { open $fh_out, ">", $out; *STDOUT = $fh_out; }
 while(<>) {
+  next if /^#|^$/;
   ($beg, $siz) = split;
   $n = read FHraw, $txt, $beg - $pos;
   print $txt;

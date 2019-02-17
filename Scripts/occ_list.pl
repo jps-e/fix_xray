@@ -11,6 +11,7 @@ GetOptions(
 die "No raw ML input file specified." unless $raw;
 open FH, $raw;
 while(<>) {
+  next if /^#|^$/;
   ($beg, $siz) = split;
   $beg += 14;
   if ($pad) { $beg -= $pad; $siz += 2*$pad; }

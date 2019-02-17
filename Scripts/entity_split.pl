@@ -12,6 +12,7 @@ GetOptions(
 die "must supply entity" unless $entity;
 die "must supply who" unless $who;
 while(<>) {
+  next if /^#|^$/;
   ($beg, $end, $name) = split /\t|$/;
   printf $fmt, $entity, $beg, $end if $name =~ /$who/;
 }
