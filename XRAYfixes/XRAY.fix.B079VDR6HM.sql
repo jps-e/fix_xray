@@ -1,0 +1,67 @@
+-- Fix errors for Park Chung Hee, entity 200.
+UPDATE entity SET id=233,count=1 WHERE id=200;
+UPDATE entity_description SET entity=233 where entity=200;
+UPDATE occurrence SET entity = 233 where entity=200 and start=62871;
+DELETE FROM occurrence WHERE start = 4380 and length=4;
+DELETE FROM occurrence WHERE start=477628 and length=4;
+DELETE FROM occurrence WHERE start=509361 and length=4;
+-- Change description for entity 200 to Park Geun-hye
+INSERT INTO "entity" VALUES(200, 'Park Geun-hye', NULL, 1, 9, 1);
+INSERT INTO "entity_description" VALUES('Park Geun-hye; (born 2 February 1952) is a former South Korean politician who served as the 18th President of South Korea from 2013 to 2017. Park was the first woman to be President of South Korea and also the first female president popularly elected as head of state in East Asia. She was also the first South Korean president to be born after the country''s founding; her predecessors were either born during Japanese rule or during the post-World War II transitional period.', 'Park Geun-hye', 1, 200);
+-- Add entity 234, Lee Myung-bak
+INSERT INTO "entity" VALUES(234, 'Lee Myung-bak', NULL, 1, 7, 1);
+INSERT INTO "entity_description" VALUES('Lee Myung-bak (born 19 December 1941) is a South Korean politician and businessman who served as President of South Korea from 2008 to 2013. Before his election as president, he was the CEO of Hyundai Engineering and Construction, as well as the mayor of Seoul from 1 July 2002, to 30 June 2006.', 'Lee Myung-bak', 1, 234);
+INSERT INTO occurrence VALUES(234, 77809, 13);
+UPDATE occurrence SET entity=234 WHERE start = 77963;
+UPDATE occurrence SET entity=234 WHERE start = 78190;
+UPDATE occurrence SET entity=234 WHERE start = 78712;
+UPDATE occurrence SET entity=234 WHERE start = 78946;
+UPDATE occurrence SET entity=234 WHERE start = 477920;
+UPDATE occurrence SET entity=234 WHERE start = 478050;
+-- Fix errors for Major General Lee Jin-won, entity 94
+UPDATE entity SET count = 23 WHERE id = 94;
+DELETE FROM occurrence WHERE start=490965 and length=3;
+DELETE FROM occurrence WHERE start=490984 and length=3;
+UPDATE "entity_description" SET text='John Joseph Sullivan (born November 20, 1959) is an American lawyer and government official serving as the 19th and current United States Deputy Secretary of State since 2017.', source_wildcard = "John Sullivan" WHERE entity = 100;
+UPDATE "entity_description" SET text='Trump Tower is a 58-story, 664-foot-tall (202 m) mixed-use skyscraper at 721-725 Fifth Avenue, between 56th and 57th Streets, in Midtown Manhattan, New York City.', source_wildcard = "Trump Tower" WHERE entity = 80;
+-- Add occurrences for Ja Song Taek
+UPDATE entity SET count=42 WHERE id=68;
+INSERT INTO occurrence VALUES(68, 139914, 2);
+INSERT INTO occurrence VALUES(68, 142469, 2);
+INSERT INTO occurrence VALUES(68, 223363, 2);
+INSERT INTO occurrence VALUES(68, 223588, 3);
+INSERT INTO occurrence VALUES(68, 223805, 3);
+INSERT INTO occurrence VALUES(68, 224150, 4);
+INSERT INTO occurrence VALUES(68, 224389, 2);
+INSERT INTO occurrence VALUES(68, 224846, 2);
+INSERT INTO occurrence VALUES(68, 225230, 2);
+INSERT INTO occurrence VALUES(68, 225330, 4);
+INSERT INTO occurrence VALUES(68, 225447, 2);
+INSERT INTO occurrence VALUES(68, 225554, 2);
+INSERT INTO occurrence VALUES(68, 226543, 2);
+INSERT INTO occurrence VALUES(68, 227323, 2);
+INSERT INTO occurrence VALUES(68, 227541, 2);
+INSERT INTO occurrence VALUES(68, 228095, 2);
+INSERT INTO occurrence VALUES(68, 228951, 2);
+INSERT INTO occurrence VALUES(68, 231433, 3);
+INSERT INTO occurrence VALUES(68, 340425, 2);
+INSERT INTO occurrence VALUES(68, 340647, 2);
+INSERT INTO occurrence VALUES(68, 341380, 2);
+INSERT INTO occurrence VALUES(68, 341482, 2);
+INSERT INTO occurrence VALUES(68, 342147, 2);
+INSERT INTO occurrence VALUES(68, 342670, 2);
+INSERT INTO occurrence VALUES(68, 342945, 2);
+INSERT INTO occurrence VALUES(68, 343112, 2);
+INSERT INTO occurrence VALUES(68, 343215, 2);
+INSERT INTO occurrence VALUES(68, 344150, 3);
+INSERT INTO occurrence VALUES(68, 345641, 2);
+INSERT INTO occurrence VALUES(68, 346567, 2);
+INSERT INTO occurrence VALUES(68, 348103, 2);
+INSERT INTO occurrence VALUES(68, 348658, 2);
+INSERT INTO occurrence VALUES(68, 348874, 3);
+INSERT INTO occurrence VALUES(68, 349188, 2);
+INSERT INTO occurrence VALUES(68, 349346, 2);
+INSERT INTO occurrence VALUES(68, 349362, 3);
+INSERT INTO occurrence VALUES(68, 349589, 2);
+INSERT INTO occurrence VALUES(68, 349857, 2);
+INSERT INTO occurrence VALUES(68, 349991, 2);
