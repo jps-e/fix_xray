@@ -1,0 +1,11 @@
+UPDATE entity SET count=158 where id=150;
+UPDATE occurrence SET entity=150 where entity=128;
+UPDATE "entity_description" SET text='Henrietta''s cousin Cliff', source_wildcard = "Cliff" WHERE entity = 73;
+UPDATE "entity_description" SET text='The southern United States, also known as the American South, Dixie, Dixieland, or simply the South, is a region of the United States of America. It is located between the Atlantic Ocean and the western United States, with the midwestern United States and northeastern United States to its north and the Gulf of Mexico and Mexico to its south.  The South does not fully match the geographic south of the United States but is commonly defined as including the states that fought for the Confederate States of America in the American Civil War.' WHERE entity = 109;
+UPDATE "entity_description" SET text='The wife of Henrietta''s cousin Galen' WHERE entity = 9;
+UPDATE "entity_description" SET text='A descendant of the slave holder of some of Henrietta''s ancestors.' WHERE entity = 161;
+UPDATE "entity_description" SET text='One of Henrietta''s sons, originally named after his father (nicknamed Cheetah) Joe.' WHERE entity = 70;
+UPDATE "entity_description" SET text='A friend of Bobbette Lacks.' WHERE entity = 36;
+UPDATE "entity_description" SET text='Grandson of Deborah Lacks.', source_wildcard = "Little Alfred" WHERE entity = 2;
+UPDATE "entity_description" SET text='Deborah Lacks'' daughter.', source_wildcard = "LaTonya" WHERE entity = 154;
+UPDATE "entity_description" SET text='Author of ''Conspiracy of Cells''' WHERE entity = 75;
